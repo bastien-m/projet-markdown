@@ -1,0 +1,18 @@
+\select@language {french}
+\contentsline {section}{\numberline {1}Client}{2}
+\contentsline {section}{\numberline {2}Pr\IeC {\'e}sentation de l'existant}{2}
+\contentsline {section}{\numberline {3}Analyse du besoin}{2}
+\contentsline {subsection}{\numberline {3.1}Descriptif g\IeC {\'e}n\IeC {\'e}ral}{2}
+\contentsline {subsection}{\numberline {3.2}B0 Cr\IeC {\'e}ation de compte}{2}
+\contentsline {subsection}{\numberline {3.3}B1 Connexion}{2}
+\contentsline {subsection}{\numberline {3.4}B2 Param\IeC {\'e}trage compte}{2}
+\contentsline {subsection}{\numberline {3.5}B3 Cr\IeC {\'e}ation de projet}{2}
+\contentsline {subsection}{\numberline {3.6}B4 Espace de travail}{3}
+\contentsline {subsubsection}{\numberline {3.6.1}B4-0 Editeur de texte}{3}
+\contentsline {subsubsection}{\numberline {3.6.2}B5-1 Afficheur de pr\IeC {\'e}sentation}{3}
+\contentsline {subsection}{\numberline {3.7}B6 Mode hors ligne}{3}
+\contentsline {subsection}{\numberline {3.8}B7 Publication}{3}
+\contentsline {subsubsection}{\numberline {3.8.1}B7-0 Priv\IeC {\'e}}{3}
+\contentsline {subsubsection}{\numberline {3.8.2}B7-1 Public}{3}
+\contentsline {subsection}{\numberline {3.9}B8 Gestionnaire de fichiers}{3}
+\contentsline {section}{\numberline {4}Diagramme b\IeC {\^e}te \IeC {\`a} corne}{4}

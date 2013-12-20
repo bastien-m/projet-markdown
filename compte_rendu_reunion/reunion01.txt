@@ -1,0 +1,16 @@
+mediaquery
+markdown
+reveals (compile du html en presentation)
+gestion de thème
+aide création page (propriétés)
+
+fichier.md --> traitement vers html (compatible reveals) --> présentation
+hebergement du fichier final sur serveur
+
+sauvegarde du fichier markdown
+
+
+column-count (propriété css)
+
+grunt.js
+yeoman (scafolding)

@@ -1,0 +1,12 @@
+espace de travail avec différent projets
+affichage dans la page du pdf
+permettre les collaborateurs (optionnel)
+gestion bibtex
+différent de git (privé)
+droit en 2 niveaux, admin et basic
+gestion de version (optionnel), version de fichier (possibilité de charger une version précédente)
+gestion buffer multiple (meme utilisateur sur different pc sur le même fichier)
+gestion stockage local / stockage serveur. hors ligne / ligne
+stockage sur serveur: sur serveur / sur cloud (dropbox, etc.)
+un service web + un service compilation (asynchrone)
+terminé fin février
