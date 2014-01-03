@@ -1,5 +1,4 @@
-\documentclass[11pt,a4paper,svgnames]{article}
-\usepackage{fouriernc}
+\documentclass[11pt,a4paper]{article}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[french]{babel}
@@ -9,7 +8,6 @@
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{listings}
-\usepackage[colorinlistoftodos]{todonotes}
 
 \begin{document}
 \author{T.Boisard, G.Calix, B.Mercier, MF.Saidane}
@@ -24,6 +22,7 @@
 
 \section{Client}
 L'université du Havre par le biais de M.Pigné nous propose la création d'une application web permettant le traitement de fichiers "markdown\footnote{http://fr.wikipedia.org/wiki/Markdown}", l'utilisateur saisira dans l'éditeur de l'application le code markdown que l'application transformera en présentation. L'application ne prendra en charge que les présentations (slide).
+
 
 \section{Présentation de l'existant}
 
@@ -70,7 +69,7 @@ L'afficheur de présentation quant à lui permettra d'avoir un aperçu temps ré
 Le principe du mode hors ligne est le suivant, l'utilisateur dans un premier temps se connecte à son compte, l'application va envoyer sur sa machine les fichiers nécessaires, une fois cela fait l'utilisateur disposera en local de ses fichiers et pourra donc continuer à travailler sans connexion, en utilisant toutes les fonctionnalités de l'éditeur (compilation notamment), il n'aura par contre pas la possibilité de récupérer un lien vers sa présentation s'il n'en a pas déjà. S'il possède déjà un lien il ne pourra pas l'ouvrir puisque cela nécessite une connexion.
 
 \subsection{B7 Publication}
-La publication sera de deux types, privé ou public.
+La publication sera de deux types, privé ou public, grâce au lien créé on pourra visionner la présentation en pleine écran.
 
 \subsubsection{B7-0 Privé}
 Par défaut la présentation sera privée, c'est à dire que l'utilisateur aura un lien privé qu'il pourra communiquer aux personnes qu'il souhaite. L'application n'indexera pas le projet dans la page principale.
