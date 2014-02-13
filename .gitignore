@@ -1,3 +1,10 @@
 *.dvi
 *.aux
 *.log
+src/node_modules/*
+src/bower_components/*
+*.html
+*.htm
+*.rb
+*.bat
+.gitignore

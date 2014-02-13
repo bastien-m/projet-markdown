@@ -1,0 +1,8 @@
+{
+  "name": "iSlide Editor",
+  "version": "0.0.1",
+  "description": "",
+  "devDependencies": {
+    "reveal-md": "0.0.8"
+  }
+}

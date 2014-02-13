@@ -1,0 +1,29 @@
+!!! 5
+html(lang='fr')
+head
+    title iSlide Editor 1.0 Creez vos slide simlement en Markdown
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', type='text/css', href='bower_components/bootstrap/dist/css/bootstrap.min.css')
+    link(rel='stylesheet', type='text/css', href='css/styles.css')
+  body
+    .main-container
+      .top-bar
+        h1.logo iSlide
+        nav
+          a(href='') Creer un Projet
+          a(href='') Sauvegarder
+          a(href='') Paramètres
+          a(href='') Se déconnecter
+      .content-wrapper
+        .file-browser
+          h1 file browser
+        #file-editor.file-editor
+          #editor
+        .file-preview
+          p
+            iframe#preview(src='basic_slide/basic_slide_md.htm#/', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='', frameborder='0', height='400', scrolling='no', width='400')
+    script(src='bower_components/ace-builds/src-min-noconflict/ace.js', type='text/javascript', charset='utf-8')
+    script(type='text/javascript', src='bower_components/jquery/jquery.min.js')
+    script(type='text/javascript', src='bower_components/bootstrap/dist/bootstrap.min.js')
+    script(type='text/javascript', src='js/script.js')
