@@ -8,7 +8,7 @@ $(function() {
 			$.ajax({
 				url : serverAdress, // 'setfile.js'
 				type : 'POST',
-				data : //format,
+				data : '',//format,
 				dataType : 'text',
 				success : function(data, statut){
 					openFile(fileName);
@@ -27,7 +27,7 @@ $(function() {
 			$.ajax({
 				url : serverAdress, // 'getfile.js'
 				type : 'POST',
-				data : //format,
+				data : '',//format,
 				dataType : 'text',
 				success : function(data, statut){
 				   editor.setValue(data);
@@ -52,7 +52,7 @@ $(function() {
 	});
 	//-----------------------------------------------------------
 
-	var gap=10;
+	var gap=30;
 	// var topBarHeight=$('.top-bar').height();
 	var topBarHeight=40;
 	var initialHeight=$(window).height()-topBarHeight;
@@ -91,5 +91,23 @@ $(function() {
 	editor.getSession().setMode("ace/mode/markdown");
 	editor.setValue(""); 
 	editor.gotoLine(1);
+
+	var mobileMenuHidden = true;
+	$('.top-bar').click(function(){
+		if(mobileMenuHidden)
+		{
+			$(this).animate({
+				'height':'130px'
+			},500);
+			mobileMenuHidden = false;
+		}
+		else
+		{
+			$(this).animate({
+				'height':'40px'
+			},500);
+			mobileMenuHidden = true;
+		}
+	});
 
 });
