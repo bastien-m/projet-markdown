@@ -1,0 +1,17 @@
+[
+	{
+		"email":"blabla@hotmail.fr",
+		"password":"bla",
+		"projet_ouvert":"projet01"
+	},
+	{
+		"email":"blebleble@gmail.com",
+		"password":"ble",
+		"projet_ouvert":"projet02"
+	},
+	{
+		"email":"blublublu@free.fr",
+		"password":"blu",
+		"projet_ouvert":"projet06"
+	}
+]

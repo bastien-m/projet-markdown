@@ -1,0 +1,54 @@
+DOCTYPE
+html(lang='fr')
+head
+  meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+  meta(charset='utf-8')
+  meta(http-equiv='X-UA-Compatible', content='IE=edge')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  meta(name='description', content='Projet Marckdown')
+  meta(name='author', content='Universite le Havre')
+  title iSlide
+  link(href='/bower_components/bootstrap/dist/css/bootstrap.css', rel='stylesheet')
+  style#holderjs-style(type='text/css')
+  | ======================================== --
+  .navbar-wrapper
+    .container
+      .navbar.navbar-inverse.navbar-fixed-top(role='navigation')
+        .container
+          .navbar-header
+            button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+              span.sr-only Toggle navigation
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            a.navbar-brand(href='') iSlide
+  .row
+    .container
+      #sign_up.main-content
+        .container
+          .row.login
+            .col-xs-12.col-sm-6.col-sm-offset-3.signin_box
+              .box
+                h4 Creation de votre compte
+                .box_cont
+                  if(error)
+                    .alert.alert-warning
+                      strong Warning!
+                      |  #{error}!
+                  .form
+                    .forgot
+                      span Avez vous deja un compte?
+                      a(href='/') Se connecter
+                    form#new_user.new_user(accept-charset='UTF-8', action='/signup', method='post')
+                      input#csrf(type="hidden",name="_csrf",value=csrftoken)
+                      input#email.form-control(type='email',name='mail',value=user, placeholder='Email address', required='', autofocus='')
+                      input#password.form-control(type='password',name='password',value='', placeholder='Password',pattern='.{7,}', required='', title='7 characters minimuns')
+                      input#password.form-control(type='password',name='confirm_password',value='', placeholder='confirm Password',pattern='.{7,}', required='', title='7 characters minimuns')
+                      button#sign_in.btn.btn-lg.btn-primary.btn-block(type="submit") S'enregistrer
+  hr.featurette-divider
+  footer
+    p © 2014 Universite le Havre, Inc.
+  script(src='/bower_components/jquery/jquery.js')
+  script(src='/bower_components/bootstrap/dist/js/bootstrap.min.js')
+  script(src='/holder.js')
+

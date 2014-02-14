@@ -1,0 +1,92 @@
+mixin projet(nom_projet, fichier_ouvert, projet_ouvert)
+	.row
+		if nom_projet === projet_ouvert
+			.glyphicon.glyphicon-folder-open.projet-ouvert  #{nom_projet}
+			for fichier in fichiers
+				if fichier === fichier_ouvert
+					.row.fichier &emsp; &emsp; &emsp;
+						span.ouvert #{fichier}
+				else
+					.row.fichier &emsp; &emsp; &emsp; #{fichier}
+		else
+			.glyphicon.glyphicon-folder-close  #{nom_projet}
+
+
+doctype html
+html(lang='fr')
+	head
+		include header
+		link(href='/css/style.css', rel="stylesheet")
+	body
+		.container
+			.col-md-3.bordered
+				for projet in projets
+					+projet(projet.nom_projet, projet.fichier_ouvert, projet_ouvert)
+				span.bottom
+					.btn.btn-primary(data-toggle="modal" data-target="#projet_modal") Gestion Projet
+					.btn.btn-primary(data-toggle="modal" data-target="#fichier_modal") Gestion Fichier
+			.col-md-6.contenu #{contenu}
+
+
+		hr.row.featurette
+		input#csrf(type='hidden',value=csrftoken)
+		.modal.fade(id="projet_modal", role="dialog", aria-labelledby="ModalProjet", aria-hidden="true")
+			.modal-dialog
+				.modal-content
+					.modal-header
+						button(type="button", class="close", data-dismiss="modal", aria-hidden="true") &times;
+						h4.modal-title(id="ModalProjet") Gestion Projet
+					.modal-body
+						form(role="form")
+								.row
+									.col-md-3
+										label(for="choix_projet") Choix du projet:
+									.col-md-3
+										select(name="choix_projet", id="choix_projet")
+											for projet in projets
+												option(value="#{projet.nom_projet}", class="form-control") #{projet.nom_projet}
+									.col-md-offset-1
+									.btn.btn-danger Suppression Projet
+								hr
+								.row
+									.col-md-3
+										label(for="choix_nom") Nom du projet:
+									.col-md-3
+										input(type="text",id="choix_nom", placeholder="nom du projet", class="form-control")
+									.col-md-offset-1
+										label(for="public") Public
+										input(id="public", type="checkbox")
+										.btn.btn-success Ajouter Projet
+					.modal-footer
+						.btn.btn-primary(data-dismiss="modal") Fermer
+
+		.modal.fade(id="fichier_modal", role="dialog", aria-labelledby="ModalPFichier", aria-hidden="true")
+			.modal-dialog
+				.modal-content
+					.modal-header
+						button(type="button", class="close", data-dismiss="modal", aria-hidden="true") &times;
+						h4.modal-title(id="ModalProjet") Gestion Fichier
+					.modal-body
+						form(role="form")
+								.row
+									.col-md-3
+										label(for="choix_fichier") Choix du fichier:
+									.col-md-3
+										select(name="choix_fichier", id="choix_fichier")
+									.col-md-offset-1
+									.btn.btn-danger Suppression Fichier
+								hr
+								.row
+									.col-md-3
+										label(for="choix_nom_fichier") Nom du fichier:
+									.col-md-3
+										input(type="text",id="choix_nom_fichier", placeholder="nom du fichier", class="form-control")
+									.col-md-offset-1
+										.btn.btn-success Ajouter Fichier
+					.modal-footer
+						.btn.btn-primary(data-dismiss="modal") Fermer
+
+		include footer
+		script(src='/js/gestionnaire_fichier.js')
+		script(src='/js/gestionnaire_bouton_projet.js')
+		script(src='/js/gestionnaire_bouton_fichier.js')

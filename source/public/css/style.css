@@ -1,0 +1,36 @@
+.glyphicon-folder-close:hover {
+	cursor: pointer;
+}
+
+.bordered {
+	background-color: #C8C3C3;
+	height: 700px;
+	border-radius: 10px;
+	border: solid 1px black;
+	padding: 10px;
+	padding-left: 20px;
+}
+
+.container {
+	margin-left:0px;
+}
+
+.bottom {
+	position:relative;
+	display: block;
+	top:80%;
+}
+
+.suppression, .ajout, .configuration {
+	position:relative;
+	left:10px;
+	margin-left:5px;
+	margin-right:5px;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+	border-radius: 5px;
+}
+
+.ouvert {
+	font-weight: bold;
+}
