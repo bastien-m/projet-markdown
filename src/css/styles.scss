@@ -38,6 +38,7 @@ body{
 	border-bottom: 2px solid $fileExplorer;
 	height: 40px;
 	font-family: helvitica;
+	overflow: hidden;
 }
 
 .content-wrapper{
@@ -151,8 +152,9 @@ nav a{
   .file-browser{
     display: block;
     position: absolute;
+    /* width: 0px !important; */ 
     top: 40px;
-    left: -120px;
+    left: 0px;
     width: 120px;
     z-index: 1000;
   }
@@ -163,24 +165,35 @@ nav a{
     display: table-row;
   }
   .top-bar h1{
-  	margin: 0;
-  	margin-left: 2px;
-  	margin-right: 2px;
-  	padding: 10px 0 0 0;
-  	font-size: 14px;
+  	display: block;
+  	margin: 0px;
+  	padding-bottom: 12px;
+  	font-size: 16px;
+  	text-align: center;
+  	width: auto;
+  }
+  nav{
+  	display: block;
+  	margin: 0px;
+  	padding-bottom: 0px;
+  	font-size: 9px;
+  	text-align: center;
+  	width: auto;
   }
   nav a{
-  	display: inline-block;
-	vertical-align: bottom;
+  	display: block;
+  	background-color: lighten(#000,20%);
+	vertical-align: top;
 	list-style: none;
-	height: 38px;
-	margin-right:1px;
+	height: 30px;
+	margin:0px;
+	padding-bottom: 15px;
 	font-size: 9px;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-weight: 200;
+	font-weight: 150;
 	text-decoration: none;
-	color:#a0a0a0;
-  	padding:14px 0px 0px 0px;
+	color:#ddd;
   	font-weight: bold;
+  	border-bottom:1px solid lighten($fileExplorer,30%);
   }
 }

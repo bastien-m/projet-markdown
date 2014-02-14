@@ -38,9 +38,10 @@ body {
   border-bottom: 2px solid #4a4a4a;
   height: 40px;
   font-family: helvitica;
+  overflow: hidden;
 }
 
-/* line 43, styles.scss */
+/* line 44, styles.scss */
 .content-wrapper {
   display: table;
   table-layout: fixed;
@@ -48,7 +49,7 @@ body {
   border-collapse: collapse;
 }
 
-/* line 49, styles.scss */
+/* line 50, styles.scss */
 .file-browser {
   background-color: #171717;
   display: table-cell;
@@ -58,7 +59,7 @@ body {
   border-right: #4a4a4a 2px solid;
 }
 
-/* line 57, styles.scss */
+/* line 58, styles.scss */
 .file-editor {
   display: table-cell;
   vertical-align: top;
@@ -66,12 +67,12 @@ body {
   position: relative;
 }
 
-/* line 63, styles.scss */
+/* line 64, styles.scss */
 #editor {
   height: 600px;
 }
 
-/* line 66, styles.scss */
+/* line 67, styles.scss */
 .file-preview {
   background-color: #171717;
   display: table-cell;
@@ -80,19 +81,19 @@ body {
   border-left: 2px solid #4a4a4a;
 }
 
-/* line 73, styles.scss */
+/* line 74, styles.scss */
 .clear-float {
   clear: both;
 }
 
-/* line 77, styles.scss */
+/* line 78, styles.scss */
 .files-tabs {
   height: 30px;
   background-color: #ee00dd;
   font-family: sans-serif;
 }
 
-/* line 82, styles.scss */
+/* line 83, styles.scss */
 .file-tab {
   font-size: 14px;
   line-height: 14px;
@@ -106,7 +107,7 @@ body {
   position: relative;
 }
 
-/* line 94, styles.scss */
+/* line 95, styles.scss */
 .close-file {
   display: block;
   position: absolute;
@@ -117,22 +118,22 @@ body {
   font-family: sans-serif;
 }
 
-/* line 103, styles.scss */
+/* line 104, styles.scss */
 .not-opened {
   border-bottom: 1px solid #969696;
 }
 
-/* line 106, styles.scss */
+/* line 107, styles.scss */
 .opened {
   border-bottom: 2px solid #01c6fd;
 }
 
-/* line 109, styles.scss */
+/* line 110, styles.scss */
 .not-saved {
   border-bottom-color: #fd7001;
 }
 
-/* line 113, styles.scss */
+/* line 114, styles.scss */
 .top-bar h1 {
   display: inline-block;
   vertical-align: middle;
@@ -145,14 +146,14 @@ body {
   margin-left: 10px;
 }
 
-/* line 124, styles.scss */
+/* line 125, styles.scss */
 nav {
   display: inline-block;
   vertical-align: middle;
   height: 40px;
 }
 
-/* line 129, styles.scss */
+/* line 130, styles.scss */
 nav ul li {
   display: inline-block;
   vertical-align: middle;
@@ -160,7 +161,7 @@ nav ul li {
   list-style: none;
 }
 
-/* line 135, styles.scss */
+/* line 136, styles.scss */
 nav a {
   display: inline-block;
   vertical-align: bottom;
@@ -176,48 +177,62 @@ nav a {
 }
 
 @media all and (max-width: 992px) {
-  /* line 151, styles.scss */
+  /* line 152, styles.scss */
   .file-browser {
     display: block;
     position: absolute;
+    /* width: 0px !important; */
     top: 40px;
-    left: -120px;
+    left: 0px;
     width: 120px;
     z-index: 1000;
   }
 
-  /* line 159, styles.scss */
+  /* line 161, styles.scss */
   .file-editor {
     display: table-row;
   }
 
-  /* line 162, styles.scss */
+  /* line 164, styles.scss */
   .file-preview {
     display: table-row;
   }
 
-  /* line 165, styles.scss */
+  /* line 167, styles.scss */
   .top-bar h1 {
-    margin: 0;
-    margin-left: 2px;
-    margin-right: 2px;
-    padding: 10px 0 0 0;
-    font-size: 14px;
+    display: block;
+    margin: 0px;
+    padding-bottom: 12px;
+    font-size: 16px;
+    text-align: center;
+    width: auto;
   }
 
-  /* line 172, styles.scss */
+  /* line 175, styles.scss */
+  nav {
+    display: block;
+    margin: 0px;
+    padding-bottom: 0px;
+    font-size: 9px;
+    text-align: center;
+    width: auto;
+  }
+
+  /* line 183, styles.scss */
   nav a {
-    display: inline-block;
-    vertical-align: bottom;
+    display: block;
+    background-color: #333333;
+    vertical-align: top;
     list-style: none;
-    height: 38px;
-    margin-right: 1px;
+    height: 30px;
+    margin: 0px;
+    padding-bottom: 15px;
     font-size: 9px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 200;
+    font-weight: 150;
     text-decoration: none;
-    color: #a0a0a0;
-    padding: 14px 0px 0px 0px;
+    color: #ddd;
     font-weight: bold;
+    border-bottom: 1px solid #979797;
   }
 }

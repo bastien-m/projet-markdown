@@ -1,6 +1,6 @@
 !!! 5
 html(lang='fr')
-head
+  head
     title iSlide Editor 1.0 Creez vos slide simlement en Markdown
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1')
@@ -16,14 +16,16 @@ head
           a(href='') Paramètres
           a(href='') Se déconnecter
       .content-wrapper
-        .file-browser
+        #file-browser.file-browser
           h1 file browser
         #file-editor.file-editor
           #editor
         .file-preview
           p
-            iframe#preview(src='basic_slide/basic_slide_md.htm#/', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='', frameborder='0', height='400', scrolling='no', width='400')
+            iframe#preview(src='http://localhost:2014/exampleuser/example.md#/', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='', frameborder='0', height='400', scrolling='no', width='400')
     script(src='bower_components/ace-builds/src-min-noconflict/ace.js', type='text/javascript', charset='utf-8')
     script(type='text/javascript', src='bower_components/jquery/jquery.min.js')
-    script(type='text/javascript', src='bower_components/bootstrap/dist/bootstrap.min.js')
+    script(type='text/javascript', src='bower_components/bootstrap/dist/js/bootstrap.min.js')
     script(type='text/javascript', src='js/script.js')
+    script(type='text/javascript', src='js/jquery.hammer.min.js')
+    script(type='text/javascript', src='js/script.swipe.js')
