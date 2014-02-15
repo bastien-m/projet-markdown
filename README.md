@@ -19,4 +19,4 @@ require('./init_db.js')
 Ensuite il est possible de lancer le fichier creation_fichier.sh qui permet de générer des fichiers utilisateurs pour pouvoir tester rapidement l'application sans avoir besoin de créer des utilisateurs, projets, fichiers.
 
 Ensuite l'adresse de connexion et la suivante: 
-https://localhost:1337/
+https://localhost:8888/
