@@ -74,7 +74,7 @@ $(function (){
 				csrf = $('#csrf').val();
 
 			suppression_liste(projet); //appel pour supprimer cote client
-			$.post("/suppression_projet", {'nom_projet': projet,'_csrf':csrf_token}, function(data){
+			$.post("/suppression_projet", {'nom_projet': projet,'_csrf':csrf}, function(data){
 				$('#choix_projet :contains("'+ projet +'")').remove();
 			});
 		}
