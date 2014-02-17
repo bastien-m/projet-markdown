@@ -1,0 +1,23 @@
+doctype html
+html(lang='fr')
+	head
+		include header
+		link(href='/bower_components/bootstrap/examples/offcanvas/offcanvas.css', rel='stylesheet')
+
+	body
+		.navbar-wrapper
+			.container
+				.navbar.navbar-inverse.navbar-static-top(role="navigation")
+					.container
+						.navbar-header
+							a.navbar-brand(href="/") Real Estate
+						.navbar-collapse.collapse
+							ul.nav.navbar-nav
+								li: a(href="/") Home
+								li: a(href="/#my_map") Map
+
+		.container
+			.col-md-5.col-md-offset-3.text-center
+				.alert.alert-danger Une erreur s'est produite :/
+		hr.row.featurette
+		include footer

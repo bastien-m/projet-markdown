@@ -8,15 +8,16 @@ Le but du projet est de réaliser une application web permettant d'écrire du co
 
 
 
-Pour lancer l'application il faut dans un premier temps lancer le script qui se trouve dans /js/initialisation/ nommé init_db.js pour cela faire
+Pour lancer l'application il faut lancer dans l'ordre les commandes suivantes :
 
-node init_db.js ou bien lancer node(commande: node)
-et dans note faire :
-
-require('./init_db.js')
-
-
-Ensuite il est possible de lancer le fichier creation_fichier.sh qui permet de générer des fichiers utilisateurs pour pouvoir tester rapidement l'application sans avoir besoin de créer des utilisateurs, projets, fichiers.
+* lancer couchdb
+* init.db.sh
+* install.dependances.1.sh
+* install.dependances.2.sh
+* install.dependances.3.sh
+* creation_fichier.sh ([optionnel] le fichier creation_fichier.sh permet de générer des fichiers utilisateurs pour pouvoir tester rapidement l'application sans avoir besoin de créer des utilisateurs, projets, fichiers.)
+* lancer_reveal-md.sh
+* server.sh
 
 Ensuite l'adresse de connexion et la suivante: 
 https://localhost:8888/

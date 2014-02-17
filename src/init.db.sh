@@ -1,0 +1,1 @@
+node ./js/initialisation/init_db.js

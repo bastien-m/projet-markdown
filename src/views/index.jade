@@ -1,0 +1,80 @@
+doctype
+
+html(lang='fr')
+head
+  meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+  meta(charset='utf-8')
+  meta(http-equiv='X-UA-Compatible', content='IE=edge')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  meta(name='description', content='Projet Marckdown')
+  meta(name='author', content='Universite le Havre')
+  link(rel='shortcut icon', href='')
+  title iSlide
+  link(href='/bower_components/bootstrap/dist/css/bootstrap.css', rel='stylesheet')
+  link(href='css/carousel.css', rel='stylesheet')
+  style#holderjs-style(type='text/css')
+  body(style='')
+    .navbar-wrapper
+      .container
+        .navbar.navbar-inverse.navbar-fixed-top(role='navigation')
+          .container
+            .navbar-header
+              button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                span.sr-only Toggle navigation
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+              a.navbar-brand(href='') iSlide
+            .navbar-collapse.collapse
+              if(user)
+                h3.navbar-right bienvenue #{user}
+              else
+                form.navbar-form.navbar-right(role='form',action='/login',method='post')
+                  input(type='hidden',name='_csrf',value=csrftoken)
+                  .form-group
+                    input.form-control(type='email',name='mail',value='', placeholder='Email address', required='', autofocus='')
+                  .form-group
+                    input.form-control(type='password',name='password',value='', placeholder='Password',pattern='.{7,}', required='', title='7 characters minimuns')
+                  button.btn.btn-success(type='submit') Se connecter
+                  a.btn.btn-success(href='/signup') S'inscrire            
+    #myCarousel.carousel.slide(data-ride='carousel')
+      ol.carousel-indicators
+        li(data-target='#myCarousel', data-slide-to='0')
+        li.active(data-target='#myCarousel', data-slide-to='1')
+        li(data-target='#myCarousel', data-slide-to='2')
+      .carousel-inner
+        .item
+          .container
+            .carousel-caption
+              h1 iSlide
+              p Permettre la création de projet markdown sur internet
+              p
+                a.btn.btn-lg.btn-primary(href='', role='button') S'inscrire maintenant
+        .item.active
+          .container
+            .carousel-caption
+              h1 iSlide
+              p Permettre de travailler sur un projet depuis plusieurs machines
+              p
+                a.btn.btn-lg.btn-primary(href='', role='button') S'informer
+        .item
+          .container
+            .carousel-caption
+              h1 iSlide
+              p
+                | Permettre donc à l'utilisateur de saisir du markdown afin de générer une publication au format               p
+                a.btn.btn-lg.btn-primary(href='', role='button') Parcourir la galerie
+      a.left.carousel-control(href='/#myCarousel', data-slide='prev')
+        span.glyphicon.glyphicon-chevron-left
+      a.right.carousel-control(href='/#myCarousel', data-slide='next')
+        span.glyphicon.glyphicon-chevron-right
+    
+      hr.featurette-divider
+      footer
+        p.pull-right
+          a(href='/') Back to top
+        p
+          | © 2014 Universite le Havre, Inc. ·
+    script(src='/bower_components/jquery/jquery.js')
+    script(src='/bower_components/bootstrap/dist/js/bootstrap.min.js')
+    script(src='/js/holder.js')

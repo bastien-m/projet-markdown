@@ -1,0 +1,238 @@
+/*-------------reset--------------------*/
+/* line 4, styles.scss */
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 11, styles.scss */
+body, div, iframe, h1, p {
+  padding: 0;
+  margin: 0;
+}
+
+/*-------------reset--------------------*/
+/* line 23, styles.scss */
+body {
+  background-color: #2b2b2b;
+  color: #efefef;
+  /* font-size: 16px; */
+}
+
+/* line 28, styles.scss */
+.main-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: auto;
+}
+
+/* line 36, styles.scss */
+.top-bar {
+  background-color: black;
+  border-bottom: 2px solid #4a4a4a;
+  height: 40px;
+  font-family: helvitica;
+  overflow: hidden;
+}
+
+/* line 44, styles.scss */
+.content-wrapper {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* line 50, styles.scss */
+.file-browser {
+  background-color: #171717;
+  display: table-cell;
+  vertical-align: top;
+  width: 15%;
+  overflow: hidden;
+  border-right: #4a4a4a 2px solid;
+}
+
+/* line 58, styles.scss */
+.file-editor {
+  display: table-cell;
+  vertical-align: top;
+  width: 50%;
+  position: relative;
+}
+
+/* line 64, styles.scss */
+#editor {
+  height: 600px;
+}
+
+/* line 67, styles.scss */
+.file-preview {
+  background-color: #171717;
+  display: table-cell;
+  vertical-align: top;
+  width: 45%;
+  border-left: 2px solid #4a4a4a;
+}
+
+/* line 74, styles.scss */
+.clear-float {
+  clear: both;
+}
+
+/* line 78, styles.scss */
+.files-tabs {
+  height: 30px;
+  background-color: #ee00dd;
+  font-family: sans-serif;
+}
+
+/* line 83, styles.scss */
+.file-tab {
+  font-size: 14px;
+  line-height: 14px;
+  height: 30px;
+  width: 100px;
+  text-align: center;
+  padding: 8px;
+  float: left;
+  background-color: #535353;
+  border-right: 1px solid #000;
+  position: relative;
+}
+
+/* line 95, styles.scss */
+.close-file {
+  display: block;
+  position: absolute;
+  top: 0px;
+  right: 3px;
+  color: #01c6fd;
+  font-size: 14px;
+  font-family: sans-serif;
+}
+
+/* line 104, styles.scss */
+.not-opened {
+  border-bottom: 1px solid #969696;
+}
+
+/* line 107, styles.scss */
+.opened {
+  border-bottom: 2px solid #01c6fd;
+}
+
+/* line 110, styles.scss */
+.not-saved {
+  border-bottom-color: #fd7001;
+}
+
+/* line 114, styles.scss */
+.top-bar h1 {
+  display: inline-block;
+  vertical-align: middle;
+  height: 38px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 8px 20px 0px 10px;
+  font-size: 18px;
+  font-weight: 150;
+  font-style: italic;
+  margin-left: 10px;
+}
+
+/* line 125, styles.scss */
+nav {
+  display: inline-block;
+  vertical-align: middle;
+  height: 40px;
+}
+
+/* line 130, styles.scss */
+nav ul li {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #f00;
+  list-style: none;
+}
+
+/* line 136, styles.scss */
+nav a {
+  display: inline-block;
+  vertical-align: bottom;
+  list-style: none;
+  height: 38px;
+  margin-right: 5px;
+  font-size: 12px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  text-decoration: none;
+  color: #a0a0a0;
+  padding: 10px 5px 0px 5px;
+}
+
+@media all and (max-width: 992px) {
+  /* line 152, styles.scss */
+  .file-browser {
+    display: block;
+    position: absolute;
+    /* width: 0px !important; */
+    top: 40px;
+    left: 0px;
+    width: 120px;
+    z-index: 1000;
+  }
+
+  /* line 161, styles.scss */
+  .file-editor {
+    display: table-row;
+  }
+
+  /* line 164, styles.scss */
+  .file-preview {
+    display: table-row;
+  }
+
+  /* line 167, styles.scss */
+  .top-bar h1 {
+    display: block;
+    margin: 0px;
+    padding-bottom: 12px;
+    font-size: 16px;
+    text-align: center;
+    width: auto;
+  }
+
+  /* line 175, styles.scss */
+  nav {
+    display: block;
+    margin: 0px;
+    padding-bottom: 0px;
+    font-size: 9px;
+    text-align: center;
+    width: auto;
+  }
+
+  /* line 183, styles.scss */
+  nav a {
+    display: block;
+    background-color: #333333;
+    vertical-align: top;
+    list-style: none;
+    height: 30px;
+    margin: 0px;
+    padding-bottom: 15px;
+    font-size: 9px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 150;
+    text-decoration: none;
+    color: #ddd;
+    font-weight: bold;
+    border-bottom: 1px solid #979797;
+  }
+}
