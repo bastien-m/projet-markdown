@@ -9,7 +9,7 @@ Le but du projet est de réaliser une application web permettant d'écrire du co
 
 
 Pour lancer l'application il faut lancer dans l'ordre les commandes suivantes :
-
+* placez vous dans le dossier src
 * lancer couchdb
 * init.db.sh
 * install.dependances.1.sh
