@@ -2,9 +2,10 @@ $(function() {
 	var project_name='';
 	var fileName='';
 	//--------------------------------------------------------
-	var serverAdress='127.0.0.1:8888/';
+	var serverAdress='https://localhost:8888/';
 	saveFile = function saveFile(fileName){
-			fileName='example.md';
+			// fileName='example.md';
+			console.log(fileName);
 			$.ajax({
 				url : serverAdress, // 'setfile.js'
 				type : 'POST',
