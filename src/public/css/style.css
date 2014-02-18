@@ -33,3 +33,7 @@
 .ouvert {
 	font-weight: bold;
 }
+
+.modal.fade{
+	color: black;
+}
