@@ -18,6 +18,7 @@ $(function () {
 			//recuperation dans data de la liste des fichiers du projet de l utilisateur
 			$.post('/recuperation_fichiers_projet', {'nom_projet':projet_courant,'_csrf':csrf}, function(data){
 				for(var i = 0; i < data.fichiers.length; i++){
+					console.log(data.fichiers[i]);
 					$(liste).append("<option value='"+ data.fichiers[i] +"' class='form-control fichier'>"+data.fichiers[i]+"</option>");
 				}
 			});
@@ -82,7 +83,7 @@ $(function () {
 			});
 		}
 
-		$('.btn.btn-primary:contains(Gestion Fichier)').click(click_fichier);
+		$('.btn.btn-primary:contains(Fichiers)').click(click_fichier);
 		$('.btn.btn-danger:contains(Suppression Fichier)').click(suppression_fichier);
 		$('.btn.btn-success:contains(Ajouter Fichier)').click(ajouter_fichier);
 		

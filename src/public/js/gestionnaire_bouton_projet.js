@@ -102,7 +102,7 @@ $(function (){
 			}
 		}
 
-		$('.btn.btn-primary:contains(Gestion Projet)').click(click_projet);
+		$('.btn.btn-primary:contains(Projets)').click(click_projet);
 		$('.btn.btn-danger:contains(Suppression Projet)').click(click_suppression_projet);
 		$('.btn.btn-success:contains(Ajouter Projet)').click(click_ajout_projet);
 	})(this);
