@@ -15,7 +15,7 @@ Auteur : SAIDANE, BOISARD, CALIX, MERCIER
 
 ---
 
-# Introduction
+# Introduction
 Client : M.Pigné
 Objectifs du projet
 Technologies utilsées
@@ -136,8 +136,8 @@ Côté client:
     
         $.post('/click_fichier', {'nom_projet':nom_projet, 'nom_fichier':nom_fichier,'_csrf':csrf}, 
             function(data){
-    	        $('.contenu').html(data);
-	    });
+                $('.contenu').html(data);
+        });
 
 	    $('.ouvert').removeClass('ouvert');
 	    $(".row.fichier:contains('"+nom_fichier+"')").addClass('ouvert');
@@ -178,6 +178,5 @@ Vues:
                     temit(key, doc);"
        }
     }
-
 
 
