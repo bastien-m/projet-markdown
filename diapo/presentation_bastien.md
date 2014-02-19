@@ -50,7 +50,7 @@ Architecture
 
 * pour auto-signer le certificat :
 
-        openssl x509 -req -in server-csr.pem -signkey server-key -out server-cert
+        openssl x509 -req -in server-csr.pem -signkey server-key.pem -out server-cert.pem
 
 ---
 
